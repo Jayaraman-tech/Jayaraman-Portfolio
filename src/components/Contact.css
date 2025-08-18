@@ -1,0 +1,107 @@
+/* CONTACT */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9f9f9, #f0f4ff); /* soft gradient */
+}
+
+/* Contact Info Container */
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: none;
+  background: white;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 25px rgba(0, 119, 255, 0.15); /* subtle blue glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-upper-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.25); /* stronger glow on hover */
+}
+
+/* Each Contact Card */
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0.8rem;
+  background: linear-gradient(135deg, #ffffff, #f8faff);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-info-container:hover {
+  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  transform: scale(1.05);
+}
+
+/* Contact Text */
+.contact-info-container p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.contact-info-container a {
+    color: black;;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info-container a:hover {
+  color: #0056cc;
+  text-decoration: underline;
+}
+
+/* Icons */
+.contact-icon {
+  cursor: default;
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-info-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

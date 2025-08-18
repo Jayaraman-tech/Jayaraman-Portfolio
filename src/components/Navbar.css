@@ -1,0 +1,98 @@
+/* Navbar Styling */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: black;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 170, 255, 0.3);
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #00aaff;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animate hamburger into X */
+.rotate1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.fade {
+  opacity: 0;
+}
+.rotate2 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    padding: 1rem 2rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

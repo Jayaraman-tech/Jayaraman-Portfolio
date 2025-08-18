@@ -1,0 +1,161 @@
+/* About Section */
+#about {
+  text-align: center;
+  padding: 5rem 2rem; /* kept larger padding */
+  background: #f9f9f9; /* subtle contrast */
+  margin-top: -150px;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Subtitles & Titles */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Intro/Outro text */
+.about-intro,
+.about-outro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Layout */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Left Image */
+.about-img img {
+  width: 280px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Content */
+.about-content {
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Cards */
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* kept wider spacing */
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem; /* kept larger padding */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  width: 50px; /* kept fixed size */
+  color: #0077ff;
+  margin-bottom: 1rem;
+}
+
+/* Skills */
+.skills {
+  margin-top: 2rem;
+}
+.skill {
+  margin-bottom: 1rem;
+}
+.skill p {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.progress {
+  background: #ddd;
+  height: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #0077ff, #00d4ff);
+  border-radius: 6px;
+  animation: loadSkill 2s ease-in-out forwards;
+}
+
+/* Skill animation */
+@keyframes loadSkill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #about {
+    padding: 3rem 1rem;
+    margin-top: 0; /* stop overlap */
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-intro,
+  .about-outro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .about-cards {
+    flex-direction: column; /* stack cards vertically */
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}

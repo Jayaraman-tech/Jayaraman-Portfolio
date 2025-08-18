@@ -1,0 +1,143 @@
+/* Profile Section Layout */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 40px 2rem;
+  box-sizing: border-box;
+  min-height: 80vh;
+  text-align: center;
+}
+/* Profile Picture */
+.section__pic-container img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.4);
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+.section__pic-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Text Styles */
+.section__text__p1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color:black;
+  font-weight: 700;
+  line-height: 1.6;
+  max-width: 600px;
+
+}
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.section__text__p2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: #0077ff;
+  min-height: 2rem; /* Prevents layout shift during typing */
+}
+
+/* Buttons */
+.btn-container {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn {
+  padding: 0.7rem 1.4rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+.btn-color-1 {
+  background: #0077ff;
+  color: white;
+}
+.btn-color-2 {
+  background: transparent;
+  border: 2px solid #0077ff;
+  color: #0077ff;
+}
+
+/* Button Glow Effect */
+.btn.glow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 153, 255, 0.3),
+    transparent
+  );
+  animation: glow-move 3s infinite;
+}
+
+/* Button Pulse Effect */
+.btn.pulse {
+  animation: pulse 2.5s infinite;
+}
+
+/* Socials */
+#socials-container {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.icon {
+  width: 35px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.icon.spin-hover:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes glow-move {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(0, 153, 255, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(0, 153, 255, 0.5); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(0, 153, 255, 0.4); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
