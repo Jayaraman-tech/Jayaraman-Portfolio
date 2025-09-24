@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 import './Footer.css';
+import { div } from 'framer-motion/client';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -124,10 +125,9 @@ const Footer = () => {
                 <>
                   <h2>Follow Me</h2>
                   <div className="social-icons">
-                    <a href="#"><FaFacebook /></a>
-                    <a href="#"><FaTwitter /></a>
-                    <a href="#"><FaInstagram /></a>
-                    <a href="#"><FaLinkedin /></a>
+                    <a href="https://www.facebook.com/profile.php?id=100015930160200"><FaFacebook /></a >
+                    <a href="https://www.instagram.com/__.the_cosmos.__?igsh=MWljMnYwZ3MydWhlNg=="><FaInstagram /></a>
+                    <a href="https://www.linkedin.com/in/jayaraman1312"><FaLinkedin /></a>
                   </div>
                 </>
               )}
